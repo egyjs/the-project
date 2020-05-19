@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <title>Home | SiteBox</title>
+    <link rel="stylesheet" href="css/compiled-4.14.1.min.css">
+
+<!--        <link rel="stylesheet" href="css/bootstrap.min.css">-->
+<!--    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.1/css/mdb.min.css" rel="stylesheet">-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap');
+
+        body {
+            font-family: 'Baloo Thambi 2', cursive;
+            background: url("img/bg.png") no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+        .AE-wrapper {
+            /*background: url("img/drone.png");*/
+            background-size: 48% !important;
+            transition: background-image 0.3s linear;
+
+
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            z-index: 100;
+            display: block;
+            padding: 3rem 4.5rem !important;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+            border-radius: 1.9rem !important;
+            width: 75% !important;
+            min-height: 80% !important;
+            max-height: 96%;
+
+            /*overflow-y: auto;*/
+            /*overflow-x: hidden;*/
+
+        }
+        .AE-wrapper .container {
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-height: 84vh;
+        }
+        .scrolling-wrapper {
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            padding: 2px;
+            min-width: 305px;
+        }
+        .scrolling-wrapper  .card {
+            display: inline-block;
+            width: 300px;
+            margin-right: 5px;
+        }
+        .navbar {
+            padding: 0 !important;
+            box-shadow: none !important;
+        }
+        .navbar .collapsing {
+            transition: none !important;
+        }
+        .nav-link {
+            padding-right: .5rem !important;
+            padding-left: .5rem !important;
+            color: #434343 !important;
+        }
+
+        .nav-item:not(:last-child) {
+            margin-right: 1.9rem;
+        }
+
+        /* Fixes dropdown menus placed on the right side */
+        .ml-auto .dropdown-menu {
+            left: auto !important;
+            right: 0;
+        }
+
+        h1, p {
+            color: #004679;
+        }
+
+        p {
+            white-space: pre-line;
+            /*overflow: auto;*/
+            max-width: 100%;
+            /*min-height: 140px;*/
+        }
+
+        .rounded-xl {
+            border-radius: 1.9rem;
+        }
+
+        .btn-primary {
+            background: #004679;
+            color: white;
+        }
+
+        button.next-perv.btn.rounded-xl {
+            background: #004980;
+            color: #fff;
+            width: 30px;
+            height: 30px;
+            padding: 4px 0;
+            position: absolute;
+            right: 10%;
+            bottom: 9%;
+        }
+
+        .AE-page:not(:first-of-type) {
+            display: none;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .navbar-nav{
+                font-size: 8.5vw !important;
+            }
+            .AE-wrapper{
+                padding: 2rem 2.9rem !important;
+            }
+        }
+        @media only screen and (max-width: 500px) {
+            .AE-wrapper {
+                padding: 1rem 2.5rem !important;
+            }
+            .scrolling-wrapper .card {
+                width: 230px;
+            }
+            .scrolling-wrapper .card h4 {
+                font-size: 100%;
+            }
+        }
+
+        .card-img-overlay{
+            height: fit-content;
+        }
+        @media only screen and (max-width: 400px) {
+            .AE-wrapper {
+                padding: 0.5rem 1.5rem !important;
+                width: 90% !important;
+            }
+
+            p, a.readmore {
+                font-size: 4vw !important;
+            }
+
+            h1 {
+                font-size: 10vw !important;
+            }
+        }
+
+
+
+
+        .scrolling-wrapper {
+            -webkit-overflow-scrolling: touch;
+        }
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.09);
+            border-radius: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.8);
+            background: #000;
+        }
+
+
+
+
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+
+    </style>
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+<body  class="">
+<div   class="AE-wrapper bg-white" style="background-size: 48% !important;background: url(img/drone.png) no-repeat bottom right;">
+    <div class="container">
+        <!--links-->
+        <nav class="navbar navbar-expand-md navbar-light my-3">
+            <a class="logo " data-tab="index" href="#">
+                <img src="img/logo.png" width="60" height="60" class="d-inline-block align-top" alt="logo" title="logo">
+                <span class="navbar-brand" style="line-height: 55px;">SiteBox</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link tab-switcher" href="#" data-tab="index"><i class="fas fa-home"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tab-switcher" href="#" data-tab="about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+
+        <!--Start AE-page-->
+        <div class="AE-page row" id="page1" data-tab="index" data-background="img/drone.png">
+            <div class="col-lg-4">
+                <h1 class="card-title">SiteBox Drone</h1>
+                <p>scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                    into electronic typesetting, remaining essentially unchanged.</p>
+                <a href="" class="btn btn-primary btn rounded-xl px-4 mt-md-5 waves-effect readmore">Read more</a>
+            </div>
+        </div>
+        <div class="AE-page row" id="page2" data-tab="logos" data-background="img/google-logo.png">
+            <div class="col-lg-4">
+                <h1 class="card-title">SiteBox Logos</h1>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    believable.</p>
+                <a href="" class="btn btn-primary btn rounded-xl px-4 mt-5 readmore">Read more</a>
+            </div>
+        </div>
+        <div class="AE-page row" id="page3" data-tab="about" data-background="img/AElogo.png"
+             data-logo="img/LOGOcircle.png">
+            <div class="col-lg-7">
+                <h1 class="card-title">About Me</h1>
+                <p style="height: 175px;overflow: auto;">My name is Abdelrahman Elzahaby, i'm from EGYPT
+                    I start coding since I was 10 years old and master it in 13-15 years old but now I love to get paid from it.
+                    I am able to handle multiple tasks on a daily basis, I use a creative approach and tools to problem solve.
+                    I am a dependable person who is great at time management, I have experience working as part of a
+                    team, and individually; Co-workers rely on me to be on time.
+                    WORK EXPERIENCE: Freelance Developer (2013 > Present):
+                    Since I mastered development and programming I am working as a freelancer, I worked with
+                    PHONEGAP-ionic , android apps, PHP Web-Applications , WordPress , and much more languages and
+                    frameworks but also I work with freelancers team and work with GIT Server and VPSs.</p>
+                <a href="https://www.paypal.me/el3zahaby" target="_blank"
+                   class="btn btn-primary btn rounded-xl px-4 mt-5 readmore">BuyMeACoffee</a>
+            </div>
+        </div>
+        <div class="AE-page row" id="page4" data-tab="blog" data-background="img/" data-logo="img/logo.png">
+            <div class="col-lg-12">
+                <h1 class="card-title">Blog</h1>
+                <div class="row justify-content-md-center">
+                    <div class="scrolling-wrapper">
+                        <!-- Card -->
+                        <div class="card promoting-card" >
+
+                            <!-- Card content -->
+                            <div class="card-body d-flex flex-row">
+
+                                <!-- Avatar -->
+                                <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" class="rounded-circle mr-3" height="50px" width="50px" alt="avatar">
+
+                                <!-- Content -->
+                                <div>
+
+                                    <!-- Title -->
+                                    <h4 class="card-title font-weight-bold mb-2">New spicy meals</h4>
+                                    <!-- Subtitle -->
+                                    <p class="card-text"><i class="far fa-clock pr-2"></i>07/24/2018</p>
+
+                                </div>
+
+                            </div>
+
+                            <!-- Card image -->
+                            <div class="view overlay">
+                                <img class="card-img-top rounded-0" src="https://mdbootstrap.com/img/Photos/Horizontal/Food/full page/2.jpg" alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+
+                            <!-- Card content -->
+                            <div class="card-body">
+
+                                <div class="collapse-content">
+
+                                    <!-- Text -->
+                                    <p class="card-text collapse" id="collapseContent">Recently, we added several exotic new dishes to our restaurant menu. They come from countries such as Mexico, Argentina, and Spain. Come to us, have some delicious wine and enjoy our juicy meals from around the world.</p>
+                                    <!-- Button -->
+                                    <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent"></a>
+                                    <i class="fas fa-share-alt text-muted float-right  my-1" data-toggle="tooltip" data-placement="top" title="Share this post"></i>
+                                    <i class="fas fa-heart text-muted float-right  my-1 mr-3" data-toggle="tooltip" data-placement="top" title="I like it"></i>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- Card -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End AE-page-->
+
+
+        <button class="next-perv tab-switcher btn rounded-xl waves-effect" data-tab="logos"><i class="fas fa-arrow-right"></i></button>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script type="text/javascript" src="js/AE-tab.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
